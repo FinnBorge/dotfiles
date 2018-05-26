@@ -9,7 +9,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'thoughtbot/vim-rspec'
-
+Plugin 'rust-lang/rust.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
@@ -38,7 +40,7 @@ au FocusLost * :silent! wall
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
-set shell=zsh
+set shell=bash\ -l
 
 map <right> :bnext!<cr>
 map <left> :bprevious!<cr>
@@ -71,3 +73,7 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = "!bundle exec rspec {spec}"
+
+nnoremap <space> za
+set foldmethod=indent
+set foldlevel=99
