@@ -12,6 +12,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'lervag/vimtex'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
@@ -77,3 +78,10 @@ let g:rspec_command = "!bundle exec rspec {spec}"
 nnoremap <space> za
 set foldmethod=indent
 set foldlevel=99
+
+"" vimtex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
